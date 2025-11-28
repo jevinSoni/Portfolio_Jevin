@@ -88,6 +88,7 @@ h6 {
     height: 100vh;
     color: #ffffff;
 }
+
 .top-header:after {
     content: '';
     position: absolute;
@@ -95,12 +96,14 @@ h6 {
     height: 100%;
     left: 0;
     top: 0;
-    background: url(../img/BG.jpg) center center no-repeat;
+    background: url(../img/bg1.jpg) center center no-repeat;
     background-size: cover;
     filter: blur(8px);
     -webkit-filter: blur(8px);
     z-index: -1;
 }
+
+
 
 .top-header .container {
     position: relative;
@@ -122,9 +125,6 @@ h6 {
     color: #ffffff;
 }
 
-.top-header p {
-    display: none;
-}
 
 .top-header h2 {
     display: inline-block;
@@ -987,6 +987,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .testimonials .container {
     max-width: 700px;
+    
 }
 
 .testimonials::before {

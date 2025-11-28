@@ -31,9 +31,11 @@
       <div class="container text-center">
         <div class="row">
           <div class="col-md-12">
-            <!-- <img src="img/profile-pic.png" alt="Profile" /> -->
+            <img src="img/profile-pic.png" alt="Profile" />
           </div>
-
+          <div class="col-md-12">
+            <h1>I'm Jevin Dholakiya</h1>
+          </div>
           <div class="col-md-12">
             <p>Unreal Engine Gameplay Developer & C++ Programmer</p>
           </div>
@@ -105,10 +107,14 @@
               innovative, gameplay-driven projects.
             </p>
 
-            <a href="PDF/Jevin.pdf" class="btn btn-primary" style="margin-top: 10px" download>
-  Download Resume
-</a>
-
+            <a
+              href="PDF/Jevin.pdf"
+              class="btn btn-primary"
+              style="margin-top: 10px"
+              download
+            >
+              Download Resume
+            </a>
           </div>
         </div>
       </div>
@@ -192,6 +198,36 @@
                 ></a>
                 <h4 class="portfolio-title">
                   Parkour System UE5 <span>Unreal Engine</span>
+                </h4>
+              </figure>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item unreal">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="img/portfolio-combat.png" class="img-fluid" alt="" />
+
+                <!-- Eye icon opens modal -->
+                <a
+                  href="#"
+                  data-toggle="modal"
+                  data-target="#combatModal"
+                  class="link-preview"
+                >
+                  <i class="fa fa-eye"></i>
+                </a>
+
+                <!-- GitHub / Drive / Documentation link -->
+                <a
+                  href="https://drive.google.com/drive/folders/1d6sOjkOMd9YiNLgz-CTgo3yu09qYg-Lj?usp=drive_link"
+                  class="link-details"
+                  target="_blank"
+                >
+                  <i class="fa fa-link"></i>
+                </a>
+
+                <h4 class="portfolio-title">
+                  Advanced Combat System (Ongoing) <span>Unreal Engine</span>
                 </h4>
               </figure>
             </div>
@@ -361,7 +397,7 @@
           <!-- Video Embed -->
           <div class="embed-responsive embed-responsive-16by9 mb-3">
             <video controls class="w-100">
-              <source src="videos/Parkour_System.mp4" type="video/mp4" />
+              <source src="videos/ParkourSystem.mp4" type="video/mp4" />
             </video>
           </div>
 
@@ -401,7 +437,10 @@
           <h3>YouTube Live Plugin UE5</h3>
           <div class="embed-responsive embed-responsive-16by9 mb-3">
             <video controls class="w-100">
-              <source src="videos/YouTube Live Video Plugin for UE5.mp4" type="video/mp4" />
+              <source
+                src="videos/YouTube Live Video Plugin for UE5.mp4"
+                type="video/mp4"
+              />
             </video>
           </div>
           <p>
@@ -418,9 +457,11 @@
         <div class="modal-content p-3">
           <h3>UE5 LLaMA Local Integration</h3>
           <div class="embed-responsive embed-responsive-16by9 mb-3">
-            <video controls class="w-100">
-              <source src="videos/UE5-LLaMA-Local-Integration.mp4" type="video/mp4" />
-            </video>
+            <iframe
+              class="embed-responsive-item"
+              src="videos/UE5-LLaMA-Local-Integration.mp4"
+              allowfullscreen
+            ></iframe>
           </div>
           <p>
             Integrated a fully local LLaMA model inside Unreal Engine 5,
@@ -431,5 +472,46 @@
         </div>
       </div>
     </div>
+    <div class="modal fade" id="combatModal">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content p-3">
+          <h3>Advanced Combat System (Ongoing)</h3>
+
+          <!-- Video Box: Replace VIDEO_LINK_HERE -->
+          <div class="embed-responsive embed-responsive-16by9 mb-3">
+            <iframe
+              class="embed-responsive-item"
+              src="videos/CombatSystem.mp4"
+              allowfullscreen
+            ></iframe>
+          </div>
+
+          <p>
+            A modular combat system built in Unreal Engine 5 featuring:<br />
+            • Light + heavy attacks<br />
+            • Combo chaining system<br />
+            • Root-motion driven animations<br />
+            • Block / roll mechanics<br />
+            • Hit detection & impact effects<br />
+            • Branching combo logic and weapon-ready architecture<br /><br />
+
+            This project is actively expanding with AI behavior interactions.
+          </p>
+
+          <button class="btn btn-dark" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+    <script>
+  $('.modal').on('hidden.bs.modal', function () {
+      var iframe = $(this).find('iframe');
+      if (iframe.length) {
+          var src = iframe.attr('src');
+          iframe.attr('src', '');
+          iframe.attr('src', src);
+      }
+  });
+</script>
+
   </body>
 </html>
